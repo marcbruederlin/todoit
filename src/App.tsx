@@ -1,5 +1,5 @@
 function App() {
-  return <div>todoit</div>;
+  return <div>todoit</div>
 }
 
-export default App;
+export default App
