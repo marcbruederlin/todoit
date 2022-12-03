@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import packageJson from '../package.json'
 import TodoList from './components/TodoList'
@@ -8,17 +8,28 @@ import { TodoItemType } from './components/TodoItem'
 
 export default function App() {
   const { version } = packageJson
+  const localItems = localStorage.getItem('todos')
 
   const [showCompleted, setShowCompleted] = useState(true)
 
-  const [items, setItems] = useState<TodoItemType[]>([])
+  const [items, setItems] = useState<TodoItemType[]>(
+    localItems ? JSON.parse(localItems) : []
+  )
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(items))
+  }, [items])
 
   const filteredItems = useMemo(() => {
+    const sortedItems = items.sort((a, b) =>
+      a.isCompleted === b.isCompleted ? 0 : a.isCompleted ? 1 : -1
+    )
+
     if (showCompleted) {
-      return items
+      return sortedItems
     }
 
-    return items.filter((item) => !item.isCompleted)
+    return sortedItems.filter((item) => !item.isCompleted)
   }, [items, showCompleted])
 
   const totalItems = useMemo(() => {

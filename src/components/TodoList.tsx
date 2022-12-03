@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef, useState } from 'react'
+import { Fragment } from 'react'
 
 import Icon from './common/Icon'
 import TodoItem, { TodoItemType } from './TodoItem'
@@ -7,15 +7,12 @@ function TodoList({ items, onDelete, onCompletedToggle, ...rest }: Props) {
   return (
     <>
       {items.length > 0 ? (
-        <ol className="flex flex-col" {...rest}>
+        <ol className="flex flex-col gap-y-4" {...rest}>
           {items.map((item) => (
             <Fragment key={item.id}>
-              <div className="border-1 h-3 w-full rounded-sm border border-dashed border-indigo-400 bg-indigo-100 opacity-0" />
-
               <TodoItem
                 id={item.id}
                 title={item.title}
-                isDraggable={true}
                 isCompleted={item.isCompleted}
                 onDelete={(id: string) => onDelete(id)}
                 onCompletedToggle={(id: string) => onCompletedToggle(id)}
