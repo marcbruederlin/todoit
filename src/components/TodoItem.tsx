@@ -1,9 +1,14 @@
-export default function TodoItem({ item }: Props) {
-  return <li>{item.title}</li>
+export default function TodoItem({ title, isDone }: Props) {
+  return (
+    <li className="rounded-md py-3 px-5 outline outline-2 outline-gray-200 dark:outline-gray-500">
+      {title}
+    </li>
+  )
 }
 
 type Props = {
-  item: TodoItemType
+  title: string
+  isDone: boolean
 }
 
 export type TodoItemType = {
