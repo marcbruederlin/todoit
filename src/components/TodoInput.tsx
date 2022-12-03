@@ -1,4 +1,5 @@
 import { FormEvent, useState } from 'react'
+
 import { TodoItemType } from './TodoItem'
 
 export default function TodoInput({ onSubmit }: Props) {
@@ -11,7 +12,7 @@ export default function TodoInput({ onSubmit }: Props) {
       onSubmit({
         id: crypto.randomUUID(),
         title: title,
-        isDone: false,
+        isCompleted: false,
       })
 
       setTitle('')
@@ -28,7 +29,7 @@ export default function TodoInput({ onSubmit }: Props) {
         autoFocus
         type="text"
         placeholder="Enter a new todo"
-        className="block w-full rounded-md py-3 px-5 text-sm text-gray-900 shadow-sm outline outline-1 outline-gray-200 transition-all focus:outline-sky-600 dark:outline-gray-500"
+        className="block w-full rounded-md border border-gray-200 p-3 text-sm shadow-sm outline-none ring-1 ring-transparent transition-all focus:border-indigo-600 focus:ring-indigo-600"
         value={title}
         onChange={handleChange}
       />

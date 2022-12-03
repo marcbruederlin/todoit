@@ -1,5 +1,7 @@
 import { useMemo } from 'react'
 
+import Button from './common/Button'
+
 export default function TodoStats({
   total,
   showCompleted,
@@ -10,14 +12,11 @@ export default function TodoStats({
   }, [showCompleted])
 
   return (
-    <div className="dark:border-gray-00 mt-4 flex items-center justify-between border-t-2 border-gray-300 pt-2 text-sm text-gray-600 dark:text-white/40">
+    <div className="mt-3 flex items-center justify-between border-t-2 border-gray-200 pt-3 text-sm text-gray-500">
       <div>{total} items</div>
-      <button
-        className="rounded-md py-2 px-3 transition-colors hover:bg-black/5 hover:text-sky-600"
-        onClick={onShowToggle}
-      >
+      <Button type="link" onClick={onShowToggle}>
         {showCompletedLabel} completed
-      </button>
+      </Button>
     </div>
   )
 }
