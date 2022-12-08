@@ -12,7 +12,7 @@ export default function TodoStats({
   }, [showCompleted])
 
   return (
-    <div className="mt-3 flex items-center justify-between border-t-2 border-gray-200 pt-3 text-sm text-gray-500">
+    <div className="mt-3 flex items-center justify-between border-t-2 border-gray-200 pt-3 text-sm text-gray-500 dark:border-gray-600">
       <div>{total} items</div>
       <Button type="link" onClick={onShowToggle}>
         {showCompletedLabel} completed

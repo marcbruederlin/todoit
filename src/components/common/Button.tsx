@@ -9,7 +9,7 @@ export default function Button({
 }: Props) {
   return (
     <button
-      className={`${className} font-medium text-indigo-600 outline-none transition-all hover:text-indigo-500 focus:text-indigo-500`}
+      className={`${className} font-medium text-indigo-600 outline-none transition-all hover:text-indigo-500 focus:text-indigo-500 dark:text-indigo-400`}
       onClick={onClick}
       {...rest}
     >

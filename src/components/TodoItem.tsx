@@ -13,7 +13,7 @@ export default function TodoItem({
 }: Props) {
   const classObject = classNames({
     'line-through opacity-50': isCompleted,
-    'group flex w-full items-center justify-between rounded-md border border-gray-200 bg-white p-3 text-sm text-gray-900 shadow-sm ring-1 ring-transparent transition-all hover:border-indigo-600 hover:ring-indigo-600':
+    'group flex w-full items-center justify-between rounded-md border border-gray-200 bg-white p-3 text-sm text-gray-900 shadow-sm ring-1 ring-transparent transition-all hover:border-indigo-600 hover:ring-indigo-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:ring-indigo-400 dark:hover:border-indigo-400':
       true,
   })
 

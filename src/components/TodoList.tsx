@@ -21,7 +21,7 @@ function TodoList({ items, onDelete, onCompletedToggle, ...rest }: Props) {
           ))}
         </ol>
       ) : (
-        <div className="flex flex-col items-center justify-center gap-1 rounded-md bg-indigo-50 py-5 text-center text-sm text-indigo-600 ring-1 ring-indigo-500">
+        <div className="flex flex-col items-center justify-center gap-1 rounded-md bg-indigo-50 py-5 text-center text-sm text-indigo-600 ring-1 ring-indigo-500 dark:bg-indigo-200 dark:ring-indigo-700">
           <Icon icon="smile" />
           <span>Create some todos</span>
         </div>

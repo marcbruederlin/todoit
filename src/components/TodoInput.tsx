@@ -29,7 +29,7 @@ export default function TodoInput({ onSubmit }: Props) {
         autoFocus
         type="text"
         placeholder="Enter a new todo"
-        className="block w-full rounded-md border border-gray-200 p-3 text-sm shadow-sm outline-none ring-1 ring-transparent transition-all focus:border-indigo-600 focus:ring-indigo-600"
+        className="block w-full rounded-md border border-gray-200 p-3 text-sm shadow-sm outline-none ring-1 ring-transparent transition-all focus:border-indigo-600 focus:ring-indigo-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-indigo-400 dark:focus:ring-indigo-400"
         value={title}
         onChange={handleChange}
       />
