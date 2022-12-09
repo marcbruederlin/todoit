@@ -52,8 +52,8 @@ export default function App() {
   }
 
   return (
-    <div className="flex h-screen w-screen flex-col items-center justify-center gap-3 bg-gray-100 antialiased dark:bg-gray-800">
-      <div className="flex w-96 flex-col gap-3">
+    <div className="flex h-full w-screen flex-col items-center justify-start gap-3 bg-gray-100 antialiased dark:bg-gray-800 md:h-screen md:justify-center">
+      <div className="flex w-full max-w-sm flex-col gap-3 p-4">
         <div className="flex flex-col gap-3">
           <TodoList
             items={filteredItems}
